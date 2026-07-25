@@ -7,11 +7,14 @@
     "@types/node": "22.10.2",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
+    "@vercel/blob": "^0.27.0",
+    "@vercel/postgres": "^0.10.0",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.468.0",
     "next": "15.5.9",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "sharp": "^0.33.5",
     "typescript": "^5.7.2"
   },
   "devDependencies": { "tailwindcss": "^3.4.17", "postcss": "^8.4.49", "autoprefixer": "^10.4.20" }

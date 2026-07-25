@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { escapeHtml, line, resendFrom, sendEmail } from '../../../lib/email';
 
 export const runtime = 'nodejs';
 
@@ -14,40 +15,6 @@ const required = [
 ] as const;
 
 type Booking = Record<string, string>;
-
-const escapeHtml = (value: string) =>
-  value.replace(/[&<>'"]/g, (character) => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    "'": '&#39;',
-    '"': '&quot;',
-  }[character] ?? character));
-
-const line = (label: string, value?: string) =>
-  value
-    ? `<tr><td style="padding:8px 16px 8px 0;color:#6D5645;font-weight:600;vertical-align:top">${label}</td><td style="padding:8px 0;color:#4b3b30">${escapeHtml(value)}</td></tr>`
-    : '';
-
-async function sendEmail(payload: Record<string, unknown>) {
-  const response = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-    cache: 'no-store',
-  });
-
-  if (!response.ok) {
-    const body = (await response.json().catch(() => ({}))) as {
-      message?: string;
-    };
-
-    throw new Error(body.message || 'Resend could not deliver the email.');
-  }
-}
 
 export async function POST(request: NextRequest) {
   if (!process.env.RESEND_API_KEY) {
@@ -90,9 +57,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const from =
-      process.env.RESEND_FROM ||
-      'Jade & Paws <onboarding@resend.dev>';
+    const from = resendFrom();
 
     const details = `
       <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:15px">

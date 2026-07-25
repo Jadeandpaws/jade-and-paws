@@ -13,7 +13,7 @@ const reasons = [
   ['Photo & video updates', Camera, 'A little window into their day, so you can relax while you’re away.'],
   ['Home is their happy place', House, 'Familiar spaces, familiar smells, and care right where they feel safest.'],
   ['Compassionate service', Heart, 'Gentle, patient attention for every personality and every stage of life.'],
-  ['Reliable communication', MessageCircleHeart, 'Clear updates and a thoughtful check-in whenever you need one.'],
+  ['Reliable communication', MessageCircleHeart, 'Clear updates and open communication, tailored to whatever makes you feel most at ease.'],
   ['Dogs & cats welcome', Dog, 'From energetic pups to quiet cats, all furry family members are welcome.'],
 ] as const;
 const services = [
@@ -26,12 +26,14 @@ const services = [
 ] as const;
 const faqs = [
   ['How do I book?', 'Send a booking request below. I’ll reply to learn about your pets and arrange a complimentary meet & greet.'],
-  ['Do you offer overnight stays?', 'Yes. Overnight house sitting is available so your pets have a familiar, caring presence through the night.'],
-  ['Can medications be administered?', 'We can discuss medication routines during our meet & greet to make sure I can support your pet safely and confidently.'],
-  ['Do you provide photo updates?', 'Always. You’ll receive photos, videos, and a note after visits so you know exactly how things are going.'],
-  ['What payment methods do you accept?', 'Payment details will be shared with your booking confirmation. A deposit is required to reserve care dates.'],
-  ['What areas do you serve?', 'Jade & Paws proudly serves Frederick, Maryland. Ask about your neighborhood when you reach out.'],
-  ['Can I schedule a meet & greet?', 'Absolutely. A meet & greet helps us get acquainted and gives your pets a chance to say hello first.'],
+  ['Do you offer overnight stays?', 'Yes! Overnight pet sitting allows your pets to stay comfortable in their own home while receiving companionship, attention, and care throughout the night. It’s a great way to keep them on their normal routine, even when you’re away. This option tends to be the best fit for pets who feel most at ease staying in their own space and sticking to their usual routine, rather than being boarded elsewhere.'],
+  ['Can medications be administered?', 'Yes. We’ll talk through your pet’s medication routine during our complimentary meet & greet, so we can figure out together whether I’m able to accommodate their individual needs.'],
+  ['Do you provide photo updates?', 'Yes, you’ll receive regular photos, videos, and visit summaries so you always know how your pet is doing while you’re away. I’m also happy to adjust how often you hear from me — some pet parents love frequent updates, while others just want the reassurance that their pet is happy and well cared for.'],
+  ['What payment methods do you accept?', 'I accept cash (preferred), Venmo, Cash App, PayPal, and Zelle. A 30% deposit is required to reserve your booking dates, with the remaining balance due before or at the start of your scheduled service.'],
+  ['What areas do you serve?', 'Jade & Paws proudly serves Frederick, Maryland. Not sure if you’re within my service area? Just reach out — I’m happy to check and let you know.'],
+  ['Can I schedule a meet & greet?', 'Every new client starts with a complimentary meet & greet. It’s a chance for us to get to know each other, talk through your pet’s routine, answer any questions you have, and make sure we’re a great fit before care begins.'],
+  ['How will I know my pet is doing while I’m away?', 'I provide regular updates with photos, videos, and visit summaries so you can feel confident and connected the whole time you’re away. I’ll tailor communication to your preferences, too — whether you love frequent check-ins or simply want the reassurance that your pet is happy and well cared for.'],
+  ['Are you insured?', 'I’m not currently insured, but I take every booking seriously and treat your home and pet with the same care and respect I’d want for my own. I prioritize the safety and well-being of every pet in my care and believe in open, honest communication with every client, so you always know exactly what to expect.'],
 ] as const;
 
 export default function Home() {

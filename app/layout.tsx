@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const localBusiness = { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Jade & Paws', description: 'Professional in-home pet sitting, dog walking, cat care, and overnight pet sitting.', email: 'jadeandpaws@gmail.com', url: siteUrl, areaServed: { '@type': 'City', name: 'Frederick', address: { '@type': 'PostalAddress', addressLocality: 'Frederick', addressRegion: 'MD', addressCountry: 'US' } }, serviceType: ['Pet Sitting', 'Dog Walking', 'Cat Sitting', 'Overnight Pet Sitting'] };
-  return <html lang="en" className="scroll-smooth"><body className={`${inter.variable} ${playfair.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />{children}</body></html>;
+  return <html lang="en" className="scroll-smooth"><body className={`${inter.variable} ${playfair.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />{children}<Analytics /></body></html>;
 }

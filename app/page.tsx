@@ -22,7 +22,7 @@ const services = [
   { title: '30 Minute Drop-In Visit', price: '$25', unit: 'per visit', description: 'Includes feeding, fresh water, potty breaks, playtime, medication if needed, and lots of love while you’re away.' },
   { title: '60 Minute Drop-In Visit', price: '$40', unit: 'per visit', description: 'Extra time for pets who need additional care, longer play sessions, cuddles, feeding, medication, or extra attention.' },
   { title: 'Cat Care Visit', price: '$25', unit: 'per visit', description: 'Includes feeding, fresh water, litter box cleaning, playtime, medication if needed, and plenty of affection based on your cat’s personality.' },
-  { title: 'Overnight House Sitting', price: 'Starting at $85', unit: 'per night', description: 'Stay in your home overnight to keep your pets comfortable, maintain their routine, and provide companionship while you’re away.' },
+  { title: 'Overnight House Sitting', price: 'Starting at $70', unit: 'per night', description: 'Stay in your home overnight to keep your pets comfortable, maintain their routine, and provide companionship while you’re away.' },
 ] as const;
 const faqs = [
   ['How do I book?', 'Send a booking request below. I’ll reply to learn about your pets and arrange a complimentary meet & greet.'],
@@ -49,3 +49,4 @@ export default function Home() {
     <footer className="bg-brown py-10 text-cream/75"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 text-center sm:flex-row sm:text-left lg:px-8"><p className="font-display text-2xl text-cream">Jade & Paws</p><p className="text-sm">© {new Date().getFullYear()} Jade & Paws. Made with care in Frederick, MD.</p><a href="#home" className="rounded-full border border-cream/25 p-2" aria-label="Back to top"><ArrowUp size={17} /></a></div></footer>
   </main>;
 }
+

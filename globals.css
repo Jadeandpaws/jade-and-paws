@@ -1,0 +1,2 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+*{box-sizing:border-box} body{margin:0;background:#F7F4EE;color:#6D5645;font-family:var(--font-inter),sans-serif} ::selection{background:#A8B89A;color:#fff} summary::-webkit-details-marker{display:none} input,textarea{font:inherit;color:#6D5645} a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #88967A;outline-offset:3px}

@@ -65,6 +65,7 @@ export async function POST(request: NextRequest) {
         ${line('Email', body.email)}
         ${line('Phone', body.phone)}
         ${line('Pet name(s)', body.petNames)}
+        ${line('Pet type', body.petType)}
         ${line('Service requested', body.service)}
         ${line('Requested dates', body.dates)}
         ${line('Additional notes', body.notes)}
@@ -94,7 +95,7 @@ export async function POST(request: NextRequest) {
       await sendEmail({
         from,
         to: [body.email],
-        subject: "We've received your booking request! 🐾",
+        subject: "I've received your booking request! 🐾",
         html: `
           <div style="max-width:620px;margin:auto;padding:28px;background:#F7F4EE;color:#6D5645;font-family:Arial,sans-serif;line-height:1.6">
             <p>Hi ${escapeHtml(body.ownerName)},</p>
